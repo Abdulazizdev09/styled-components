@@ -1,23 +1,44 @@
 import StyledButton, { FancyButton, SubmitButton } from "./components/Button/Button"
+import { ThemeProvider } from "styled-components"
+import { DarkButton } from "./components/Button/Button.styles"
 
 
+
+const theme = {
+  dark: {
+    primary: "black",
+    text: "white"
+  },
+  light: {
+    primary: "white",
+    text: "black"
+  }
+
+}
 function App() {
   return (
-    <div className='App'>
-      <StyledButton type="submit ">Styled button </StyledButton>
-      <div>
-        <br />
+    <ThemeProvider theme={theme}>
+
+      <div className='App'>
+        <StyledButton type="submit ">Styled button </StyledButton>
+        <div>
+          <br />
+        </div>
+        <StyledButton variant='outline'>Styled button </StyledButton>
+        <div>
+          <br />
+        </div>
+        <FancyButton>Fancy Button</FancyButton>
+        <div>
+          <br />
+        </div>
+        <SubmitButton>Submit Button</SubmitButton>
+        <div>
+          <br />
+        </div>
+        <DarkButton>Dark Button</DarkButton>
       </div>
-      <StyledButton variant='outline'>Styled button </StyledButton>
-      <div>
-        <br />
-      </div>
-      <FancyButton>Fancy Button</FancyButton>
-      <div>
-        <br />
-      </div> 
-      <SubmitButton>Submit Button</SubmitButton>
-    </div>
+    </ThemeProvider>
 
 
   )
