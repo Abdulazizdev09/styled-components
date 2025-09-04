@@ -10,3 +10,8 @@ export const StyledButton = styled.button`
   font-size: 16px;           /* Text size */
   transition: background 0.3s ease;
 `
+
+export const FancyButton = styled(StyledButton)`
+  background-image:linear-gradient(to right,#f6d365 0%,#fda085 100%) ;
+  border: none;
+`

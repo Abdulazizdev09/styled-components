@@ -1,4 +1,4 @@
-import StyledButton from "./components/Button/Button"
+import StyledButton, { FancyButton } from "./components/Button/Button"
 
 
 function App() {
@@ -9,7 +9,13 @@ function App() {
         <br />
       </div>
       <StyledButton variant='outline'>Styled button </StyledButton>
+      <div>
+        <br />
+      </div>
+      <FancyButton>Fancy Button</FancyButton>
     </div>
+
+
   )
 }
 
